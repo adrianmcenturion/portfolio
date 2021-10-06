@@ -1,0 +1,95 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    
+}
+
+body {
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    /* box-sizing: border-box; */
+}
+
+/**************************** UTILIDADES *******************************/
+.flex-centrado {
+    display: flex;
+    align-items: center;
+}
+
+
+/**********************************************************************/
+
+
+
+
+/**************************** NAVBAR *******************************/
+
+.navbar {
+    justify-content: space-evenly;
+    list-style: none;
+    background-color: black;
+    color: blanchedalmond;
+    margin: 0%;
+    padding: 30px;
+}
+
+
+
+/**********************************************************************/
+
+
+
+
+/****************************** SOBRE MI ********************************/
+
+
+.section-sobre-mi {
+    justify-content: center;
+}
+
+/************************************************************************/
+
+
+
+/****************************** PROYECTOS ********************************/
+
+
+.section-proyectos {
+    justify-content: center;
+}
+
+/************************************************************************/
+
+
+/****************************** CONTACTO ********************************/
+
+.section-contacto {
+    justify-content: center;
+}
+
+/************************************************************************/
+
+
+
+/****************************** FOOTER ********************************/
+
+footer {
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    bottom: 0%;
+    background-color: black;
+    color: blanchedalmond;
+    
+}
+
+footer ul {
+    list-style: none;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+/************************************************************************/
