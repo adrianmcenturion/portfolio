@@ -3,6 +3,12 @@ html {
 }
 
 :root {
+    --background: #000114;
+    --royalBlueDark: #002962;
+    --USAFABlue: #004E89;
+    --steelBlue: #407BA7;
+    --platinum: #EBEBEB;
+    --font1:'Titillium Web', sans-serif;
     
 }
 
@@ -10,6 +16,9 @@ body {
     padding: 0%;
     margin: 0%;
     width: 100%;
+    background-color: var(--background);
+    color: var(--platinum);
+    font-family: var(--font1)
     /* box-sizing: border-box; */
 }
 
@@ -28,14 +37,28 @@ body {
 /**************************** NAVBAR *******************************/
 
 .navbar {
-    justify-content: space-evenly;
+    justify-content: space-between;
     list-style: none;
-    background-color: black;
-    color: blanchedalmond;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: var(--platinum);
     margin: 0%;
+    margin-bottom: 50px;
     padding: 30px;
+    font-size: 20px;
 }
 
+.navbar div {
+    width: 50%;
+}
+
+.ul-navbar {
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+.navbar h2 {
+    margin-left: 10%;
+}
 
 
 /**********************************************************************/
@@ -47,7 +70,29 @@ body {
 
 
 .section-sobre-mi {
+    margin-top: 100px;
     justify-content: center;
+}
+
+.section-sobre-mi-wrapper {
+    max-width: 1200px;
+    justify-content: space-around;
+}
+
+.section-sobre-mi-wrapper div {
+    width: 45%;
+}
+
+.section-sobre-mi img {
+    width: 100%;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h1 span {
+    display: block;
 }
 
 /************************************************************************/
@@ -82,7 +127,7 @@ footer {
     position: fixed;
     bottom: 0%;
     background-color: black;
-    color: blanchedalmond;
+    color: var(--platinum);
     
 }
 
