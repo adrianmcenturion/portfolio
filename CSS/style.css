@@ -125,6 +125,10 @@ h1 span {
     justify-content: space-around;
 }
 
+.container-tecnologias span {
+    display: block;
+}
+
 
 
 /************************************************************************/
@@ -180,9 +184,9 @@ h1 span {
 /****************************** FOOTER ********************************/
 
 footer {
+    margin-top: 10%;
     width: 100%;
     justify-content: center;
-    position: fixed;
     bottom: 0%;
     background-color: black;
     color: var(--platinum);
@@ -193,6 +197,11 @@ footer ul {
     list-style: none;
     justify-content: space-evenly;
     width: 100%;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /************************************************************************/
