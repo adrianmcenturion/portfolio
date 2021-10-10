@@ -48,6 +48,34 @@ h3 {
     color: #00d8ff;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.boton-up {
+    position: fixed;
+    right: 1%;
+    bottom: 8%;
+    width: 50px;
+    
+}
+
+.boton-up i {
+    font-size: 20px;
+    
+}
+
+.fa-chevron-up {
+    color: var(--platinum);
+    padding: 5px;
+    border: 2px solid var(--platinum);
+}
+
+.inicio, .section-sobre-mi, .section-proyectos, .section-contacto {
+    margin: 3.5rem 0;
+}
+
 
 /**********************************************************************/
 
@@ -192,6 +220,35 @@ h1 span {
 
 .section-contacto {
     justify-content: center;
+    flex-direction: column;
+    
+}
+
+.container-formulario {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-formulario-1, .container-formulario-2 {
+    width: 40%;
+    
+}
+
+.mini-container-contacto {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container-formulario button {
+    margin-top: 10px;
+    background-color: var(--USAFABlue);
+    padding: 20px;
+    border-style: none;
+    color: var(--platinum);
+    font-family: var(--font1);
+    font-size: 1em;
 }
 
 /************************************************************************/
@@ -201,7 +258,7 @@ h1 span {
 /****************************** FOOTER ********************************/
 
 footer {
-    margin-top: 10%;
+    
     width: 100%;
     justify-content: center;
     bottom: 0%;

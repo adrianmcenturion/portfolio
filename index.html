@@ -13,17 +13,17 @@
   </head>
   <body>
     <main>
-      <header>
+      <header id="inicio" >
         <nav>
           <ul class="navbar flex-centrado">
             <div>
               <h2>Adrián Centurion</h2>
             </div>
             <div class="ul-navbar flex-centrado">
-            <li>Inicio</li>
-            <li>Sobre Mi</li>
-            <li>Proyectos</li>
-            <li>Contacto</li>
+            <li> <a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre Mi</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
           </div>
           </ul>
         </nav>
@@ -38,7 +38,11 @@
           </div>
         </div>
       </header>
-      <section class="section-sobre-mi flex-centrado">
+      <div class="boton-up">
+        <a href="#inicio"><i class="fa-solid fa-chevron-up"></i></a>
+      </div>
+
+      <section id="sobre-mi" class="section-sobre-mi flex-centrado">
         <h3>Sobre Mi</h3>
         <div class="section-sobre-mi-wrapper flex-centrado">
         <p>Me llamo Adrián Centurion. Estoy buscando mi primer trabajo como programador. En la actualidad me encuentro realizando un bootcamp de FullStack Developer en NUCBA.</p>
@@ -53,7 +57,7 @@
         </div>
       </div>
       </section>
-      <section class="section-proyectos flex-centrado">
+      <section id="proyectos" class="section-proyectos flex-centrado">
         <h3>Proyectos</h3>
         <div class="container-proyectos">
           <div class="container-cards-proyectos">
@@ -104,14 +108,36 @@
           </div>
         </div>
       </section>
-      <section class="section-contacto flex-centrado">
+      <section id="contacto" class="section-contacto flex-centrado">
         <h3>Contacto</h3>
+        <div class="container-formulario">
+          <div class="container-formulario-1">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum quo mollitia sed labore officiis aut, quis rerum animi, sunt soluta laboriosam provident voluptate aliquam ab earum quibusdam, maiores totam quasi?</p>
+          </div>
+          <div class="container-formulario-2">
+            <form action="">
+              <div class="mini-container-contacto">
+              <label for="nombre">Ingrese su nombre:</label>
+              <input type="text" name="nombre">
+            </div>
+              <div class="mini-container-contacto">
+              <label for="mail">Ingrese su mail:</label>
+              <input type="email" name="mail">
+            </div>
+              <div class="mini-container-contacto">
+              <label for="mensaje">Escriba su mensaje:</label>
+              <textarea name="mensaje" id="" cols="30" rows="10"></textarea>
+              <button type="button">Enviar</button>
+            </div>
+            </form>
+          </div>
+        </div>
       </section>
       <footer class="flex-centrado">
         <ul class="flex-centrado">
           <li><a href="http://www.linkedin.com/in/adrian-centurion" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
           <li><a href="https://github.com/adrianmcenturion" target="_blank"><i class="fab fa-github"></i></a></li>
-          <li><a href="https://github.com/adrianmcenturion" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+          <li><a href="http://wa.me/5491164681584" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
         </ul>
       </footer>
     </main>
