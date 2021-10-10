@@ -32,6 +32,22 @@ h3 {
     font-size: 32px;
 }
 
+.fa-html5 {
+    color: #e34f26;
+}
+
+.fa-css3-alt {
+    color: #264de4;
+}
+
+.fa-js-square {
+    color: #f0db4f;
+}
+
+.fa-react {
+    color: #00d8ff;
+}
+
 
 /**********************************************************************/
 
@@ -123,10 +139,11 @@ h1 span {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    font-size: 1.5em;
 }
 
-.container-tecnologias span {
-    display: block;
+.container-tecnologias div {
+    flex-direction: column;
 }
 
 
@@ -203,5 +220,12 @@ footer a {
     text-decoration: none;
     color: inherit;
 }
+
+i {
+    font-size: 2em;
+    color: var(--platinum);
+}
+
+
 
 /************************************************************************/
