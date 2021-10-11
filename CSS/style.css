@@ -29,7 +29,7 @@ body {
 }
 
 h3 {
-    font-size: 32px;
+    font-size: 2rem;
 }
 
 .fa-html5 {
@@ -57,12 +57,14 @@ a {
     position: fixed;
     right: 1%;
     bottom: 8%;
-    width: 50px;
+    width: 3.12em;
+    z-index: 10;
+    
     
 }
 
 .boton-up i {
-    font-size: 20px;
+    font-size: 1em;
     
 }
 
@@ -70,11 +72,28 @@ a {
     color: var(--platinum);
     padding: 5px;
     border: 2px solid var(--platinum);
+    background-image: linear-gradient(90deg, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
 }
 
 .inicio, .section-sobre-mi, .section-proyectos, .section-contacto {
     margin: 3.5rem 0;
 }
+
+.wave1 {
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+.wave1 img {
+    background-size: contain;
+    display: block;
+    height: 15.62em;
+    width: 100%;
+    transform: scaleX(2.5);
+}
+
+
 
 
 /**********************************************************************/
@@ -92,7 +111,7 @@ a {
     margin: 0%;
     margin-bottom: 50px;
     padding: 30px;
-    font-size: 20px;
+    font-size: 1em;
 }
 
 .navbar div {
@@ -135,7 +154,7 @@ a {
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 2.25em;
 }
 
 h1 span {
@@ -152,13 +171,18 @@ h1 span {
 
 
 .section-sobre-mi {
-    margin-top: 100px;
+    margin: 0%;
+    padding-bottom: 3em;
+    margin-bottom: 3em;
     justify-content: center;
     flex-direction: column;
+    background-color: var(--royalBlueDark);
+    
 }
 
 .section-sobre-mi-wrapper {
-    max-width: 1200px;
+    max-width: 75em;
+    width: 100%;
     flex-direction: column;
     
 }
@@ -184,21 +208,34 @@ h1 span {
 
 
 .section-proyectos {
-    justify-content: center;
+    margin: 0%;
+    justify-content: space-evenly;
     flex-direction: column;
+    
 }
 
 .container-cards-proyectos {
-    width: 1200px;
+    width: 100%;
+    max-width: 75em;
     flex-direction: row;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 3em;
 }
 
 .card {
-    background-color: var(--royalBlueDark);
+    background-image: linear-gradient(90deg, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    box-shadow: 0px 5px 14px 4px rgb(0 0 0 / 30%);
+    -webkit-box-shadow: 0px 5px 14px 4px rgb(0 0 0 / 30%);
+    -moz-box-shadow: 0px 5px 14px 4px rgb(0 0 0 / 30%);
+    margin-bottom: 3em;
+
+
+
+
     /* padding: 100px; */
-    width: 20%;
+    min-width: 20em;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -219,13 +256,14 @@ h1 span {
 /****************************** CONTACTO ********************************/
 
 .section-contacto {
+    margin-top: 0%;
     justify-content: center;
     flex-direction: column;
     
 }
 
 .container-formulario {
-    max-width: 1200px;
+    max-width: 75em;
     display: flex;
     justify-content: space-around;
 }
@@ -243,8 +281,8 @@ h1 span {
 
 .container-formulario button {
     margin-top: 10px;
-    background-color: var(--USAFABlue);
-    padding: 20px;
+    background-image: linear-gradient(90deg, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    padding: 1.25em;
     border-style: none;
     color: var(--platinum);
     font-family: var(--font1);
