@@ -182,7 +182,7 @@ h1 span {
 
 .section-sobre-mi-wrapper {
     max-width: 75em;
-    width: 100%;
+    width: 90%;
     flex-direction: column;
     
 }
@@ -256,16 +256,26 @@ h1 span {
 /****************************** CONTACTO ********************************/
 
 .section-contacto {
-    margin-top: 0%;
+    margin: 0%;
     justify-content: center;
     flex-direction: column;
+    background-color: var(--royalBlueDark);
     
 }
 
 .container-formulario {
     max-width: 75em;
+    width: 90%;
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-formulario-grande {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3em;
 }
 
 .container-formulario-1, .container-formulario-2 {
