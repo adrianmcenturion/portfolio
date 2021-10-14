@@ -312,23 +312,52 @@ h1 span {
 
 
 
-
-    /* padding: 100px; */
+    height: 25em;
     min-width: 20em;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     /* align-content: center; */
     align-items: center;
-    /* justify-content: space-around; */
+    justify-content: space-between;
 }
+
+.card-container-img {
+    max-width: 20em;
+}
+
+.card-container-img, .card-container-img img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px 10px 0 0;
+}
+
+
 
 .mini-container-card {
     flex-direction: row;
     display: flex;
     width: 100%;
     justify-content: space-evenly;
+    margin: 1.5em 0;
 }
+
+.card-boton {
+    background-color: var(--steelBlue);
+    padding: 0.5em;
+    border-style: none;
+    color: var(--platinum);
+    font-family: var(--font1);
+    font-size: 1em;
+    margin-bottom: 2em;
+}
+
+.card-boton:hover {
+    filter: brightness(1.2);
+}
+
+
+
 /************************************************************************/
 
 
