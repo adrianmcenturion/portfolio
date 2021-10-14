@@ -2,6 +2,12 @@ html {
     scroll-behavior: smooth;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
 :root {
     --background: #000114;
     --royalBlueDark: #002962;
@@ -13,13 +19,15 @@ html {
 }
 
 body {
-    padding: 0%;
-    margin: 0%;
     width: 100%;
     background-color: var(--background);
     color: var(--platinum);
     font-family: var(--font1)
     /* box-sizing: border-box; */
+}
+
+.header{
+    border-bottom: 1px solid #E2E8F0;
 }
 
 /**************************** UTILIDADES *******************************/
@@ -52,6 +60,11 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+li {
+    list-style: none;
+}
+
 
 .boton-up {
     position: fixed;
@@ -103,6 +116,62 @@ a {
 
 /**************************** NAVBAR *******************************/
 
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: inherit;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: inherit;
+}
+
+
+
+
+
+
+
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--platinum);
+}
+
+/* 
 .navbar {
     justify-content: space-between;
     list-style: none;
@@ -126,7 +195,7 @@ a {
 .navbar h2 {
     margin: 0%;
     margin-left: 10%;
-}
+} */
 
 
 /**********************************************************************/
@@ -319,6 +388,7 @@ footer ul {
     list-style: none;
     justify-content: space-evenly;
     width: 100%;
+    padding: 1.5em 0;
 }
 
 footer a {
@@ -331,6 +401,73 @@ i {
     color: var(--platinum);
 }
 
+
+
+/************************************************************************/
+
+
+
+/****************************** QUERIES ********************************/
+
+
+@media only screen and (max-width: 768px) {
+
+    .boton-up {
+        display: none;
+    }
+
+    .inicio {
+        transition: 0.3s;
+    }
+
+    .inicio.active {
+        padding-top: 348px;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+        background-color: var(--background);
+    }
+
+    .nav-item {
+        margin: 0;
+    padding: 1.5rem 0;
+    /* border: var(--platinum); */
+    border-bottom: 2px solid var(--platinum);
+    width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
 
 
 /************************************************************************/

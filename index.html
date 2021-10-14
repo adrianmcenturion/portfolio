@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adrián Centurion</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
@@ -13,21 +14,23 @@
   </head>
   <body>
     <main>
-      <header id="inicio" >
-        <nav>
-          <ul class="navbar flex-centrado">
-            <div>
-              <h2>Adrián Centurion</h2>
-            </div>
-            <div class="ul-navbar flex-centrado">
-            <li> <a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre-mi">Sobre Mi</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </div>
+      <header class="header" id="inicio" >
+        
+        <nav class="navbar" aria-label="Mobile Accessibility Navigation Dropdown" class="primary-navigation" role="navigation">
+          <a class="nav-logo" href="#inicio">Adrián Centurion</a>
+          <ul class="nav-menu">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre Mi</a></li>
+            <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
           </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
         </nav>
-        <div class="inicio flex-centrado">
+          <div class="inicio flex-centrado">
           <div class="section-inicio-wrapper flex-centrado">
             <div>
               <img src="./img/1.jpg" alt="yo" />
@@ -37,10 +40,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="wave1">
-          <img src="./img/wave.svg" alt="">
-        </div> -->
-        
       </header>
       <div class="boton-up">
         <a href="#inicio"><i class="fa-solid fa-chevron-up"></i></a>
@@ -153,5 +152,6 @@
         </ul>
       </footer>
     </main>
+    <script src="./JS/index.js"></script>
   </body>
 </html>
