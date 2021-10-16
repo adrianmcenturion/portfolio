@@ -1,44 +1,26 @@
+
+
+
+
+
 <?php
-if($_POST["message"]) {
-    $name = $_POST["nombre"];
-    $visitorEmail = $_POST["email"];
-    $message = $_POST["mensaje"];
-    $OUR_MAIL = 'adrianmcenturion@gmail.com';
-    
-$errors = "";
-//NORMAL OPERATION - NO ERRORS        
-    if(empty($errors)){
-        $EMAIL_SUBJECT = "New Form Contact From " . $name . " @ Your Portfolio Website!";
-        $emailBody = "User name: " . $name . "rn".
-                     "User email: " . $visitorEmail . "rn".
-                     "User message: " . $message . "rn";
- 
-        $TARGET_EMAIL = "visisorFilledEmail@adress.com";
-//HEADERS
-        $headers = "From: " . $OUR_MAIL . "rn";
-        $headers .= "Reply-To: " . $visitorEmail . "rn";
+$name = $_POST['nombre'];
+$mail = $_POST['email'];
+$message = $_POST['mensaje'];
 
-        
-        $success = mail($TARGET_EMAIL, $EMAIL_SUBJECT, $emailBody, $headers);
-        //SUCCESS OR FAIL FOR CORRECT TEXT
-        if ($success){
-                ?>
-              <script language="javascript" type="text/javascript">
-              //REDIRECT TO THE MAIN PAGE or alternatively to 'thank you page'
-         alert('Thank you for the message. I will be in contact with you shortly.');
-               window.location.href = './index.html';
-              </script>
-              <?php
-        } else{
-              //mail failed for some reason
-              ?>
-              <script language="javascript" type="text/javascript">
-                alert('Message failed. Please, contact me by an alternative way.');
-                window.location.href = './index.html';
-              </script>
-              <?php
-        }
-}}
+$header = 'From: ' . $mail . " \r\n";
+$header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
+$header .= "Mime-Version: 1.0 \r\n";
 
+$message = "Este mensaje fue enviado por: " . $name . " \r\n";
+$message .= "Su e-mail es: " . $mail . " \r\n";
+$message .= "Mensaje: " . $_POST['message'] . " \r\n";
+$message .= "Enviado el: " . date('d/m/Y', time());
 
+$para = 'adrianmcenturion@gmail.com';
+$asunto = 'Mensaje de... (Escribe como quieres que se vea el remitente de tu correo)';
+
+mail($para, $asunto, utf8_decode($message), $header);
+
+header("Location:index.html");
 ?>
