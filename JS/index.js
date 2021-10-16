@@ -19,3 +19,8 @@ function closeMenu() {
     navMenu.classList.remove("active");
     inicio.classList.remove("active")
 }
+
+
+console.info('virtual email sent from sendmail.php.');
+//REDIRECT TO THE MAIN PAGE
+window.location.href = './index.html';
