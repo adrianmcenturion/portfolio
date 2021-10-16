@@ -21,6 +21,6 @@ function closeMenu() {
 }
 
 
-console.info('virtual email sent from sendmail.php.');
-//REDIRECT TO THE MAIN PAGE
-window.location.href = './index.html';
+// console.info('virtual email sent from sendmail.php.');
+// //REDIRECT TO THE MAIN PAGE
+// window.location.href = './index.html';
