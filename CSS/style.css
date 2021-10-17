@@ -208,6 +208,7 @@ li {
 
 .inicio {
     justify-content: center;
+    overflow: hidden;
 }
 
 .section-inicio-wrapper {
@@ -223,12 +224,20 @@ li {
     width: 45%;
 }
 
+.section-inicio-container-img {
+    animation: slide 2s alternate-reverse;
+    animation-iteration-count: 1;
+}
+
 .inicio img {
     width: 100%;
 }
 
 h1 {
     font-size: 2.25em;
+    animation: slide2 2s alternate-reverse;
+    animation-iteration-count: 1;
+    
 }
 
 h1 span {
@@ -294,7 +303,7 @@ h1 span {
 }
 
 .section-proyectos h3 {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
 .container-cards-proyectos {
@@ -313,27 +322,37 @@ h1 span {
     -webkit-box-shadow: 0px 5px 14px 4px rgb(0 0 0 / 30%);
     -moz-box-shadow: 0px 5px 14px 4px rgb(0 0 0 / 30%);
     margin-bottom: 3em;
-
-
-
-    height: 25em;
+    min-height: 25em;
     min-width: 21em;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    /* align-content: center; */
     align-items: center;
     justify-content: space-between;
+    transition: 0.4s ease-in-out all;
+}
+
+.card:hover {
+
+    filter: brightness(1.2);
+
 }
 
 .card-container-img {
-    max-width: 21em;
+    max-width: 22em;
+    overflow: hidden;
 }
 
 .card-container-img, .card-container-img img {
     width: 100%;
     object-fit: contain;
     border-radius: 10px 10px 0 0;
+}
+
+.card p {
+    width: 90%;
+    text-align: center;
+    margin-top: 0.5em;
 }
 
 
@@ -344,6 +363,10 @@ h1 span {
     width: 100%;
     justify-content: space-evenly;
     margin: 1.5em 0;
+}
+
+.mini-container-card i {
+    font-size: 2em;
 }
 
 .card-boton {
@@ -393,7 +416,9 @@ h1 span {
 .container-formulario-grande {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 3em;
+    margin: 3em 0;
+    max-width: 75em;
+    width: 100%;
 }
 
 .container-formulario-1, .container-formulario-2 {
@@ -416,6 +441,18 @@ h1 span {
     font-size: 1em;
 }
 
+.links {
+    margin: 0.5em 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.links i {
+    font-size: 1.5em;
+    margin-right: 0.5em;
+}
+
 /************************************************************************/
 
 
@@ -435,7 +472,7 @@ footer {
 footer ul {
     list-style: none;
     justify-content: space-evenly;
-    width: 100%;
+    width: 10%;
     padding: 1.5em 0;
 }
 
@@ -444,14 +481,58 @@ footer a {
     color: inherit;
 }
 
-i {
-    font-size: 2em;
+footer i {
+    font-size: 1em;
     color: var(--platinum);
 }
 
 
 
 /************************************************************************/
+
+
+
+/****************************** ANIMACION ********************************/
+
+
+@keyframes slide {
+
+    0% {
+        transform: translateX(0px);
+        
+    }
+
+    
+    100% {
+        
+        transform: translateX(-1600px);
+
+    }
+
+}
+
+@keyframes slide2 {
+
+    0% {
+        transform: translateX(0);
+        
+    }
+
+    
+    100% {
+        
+        transform: translateX(1600px);
+
+    }
+
+}
+
+
+
+
+
+/************************************************************************/
+
 
 
 
@@ -546,6 +627,17 @@ i {
 
     .container-formulario-2 {
         margin-top: 2em;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    footer ul {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 30%;
     }
 
 
