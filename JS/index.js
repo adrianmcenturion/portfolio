@@ -21,6 +21,12 @@ function closeMenu() {
 }
 
 
-// console.info('virtual email sent from sendmail.php.');
-// //REDIRECT TO THE MAIN PAGE
-// window.location.href = './index.html';
+
+function redirect() {
+    if (window.location.href = "https://adriancenturion.vercel.app/thankyou") {
+
+    setTimeout(window.location.replace("https://adriancenturion.vercel.app"), 2000);
+        
+    }
+    
+}
