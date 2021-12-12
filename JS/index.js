@@ -30,3 +30,5 @@ function redirect() {
     }
     
 }
+
+redirect()
