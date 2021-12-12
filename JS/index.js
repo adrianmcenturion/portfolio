@@ -27,6 +27,8 @@ function redirect() {
 
     setTimeout(window.location.replace("https://adriancenturion.vercel.app"), 2000);
         
+    }else {
+        return
     }
     
 }
