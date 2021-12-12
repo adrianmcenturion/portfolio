@@ -56,6 +56,10 @@ h3 {
     color: #00d8ff;
 }
 
+.fa-bootstrap {
+    color: #8412fb;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -314,6 +318,7 @@ h1 span {
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin-bottom: 3em;
+    gap: 1em;
 }
 
 .card {
@@ -330,6 +335,7 @@ h1 span {
     align-items: center;
     justify-content: space-between;
     transition: 0.4s ease-in-out all;
+    max-width: 21em;
 }
 
 .card:hover {
@@ -383,6 +389,18 @@ h1 span {
     filter: brightness(1.2);
 }
 
+.proyectos-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-around
+    
+
+}
+
+/* .links a {
+    width: 30%;
+} */
+
 
 
 /************************************************************************/
@@ -428,6 +446,11 @@ h1 span {
 .mini-container-contacto {
     display: flex;
     flex-direction: column;
+
+}
+
+.mini-container-contacto button:hover {
+    cursor: pointer;
 
 }
 
