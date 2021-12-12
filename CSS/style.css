@@ -110,6 +110,11 @@ li {
     transform: scaleX(2.5);
 }
 
+input, textarea, ::placeholder {
+    font-family: var(--font1);
+    padding-left: .5em;
+}
+
 
 
 
