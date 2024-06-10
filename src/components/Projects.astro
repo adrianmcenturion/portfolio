@@ -1,0 +1,20 @@
+---
+import Card from "./Card.astro"
+
+const PROJECTS = [ {
+    img: '/shrinkurl.avif',
+    title: 'ShrinkUrl',
+    
+    description: 'App para acortar links. Al iniciar sesión podes revisar tus links guardados, modificarlos o eliminarlos.',
+    deploy: '',
+    code: 'https://github.com/',
+    tags: ['Next Js', 'React', 'Shadcn-ui', 'Supabase']
+},
+]
+---
+
+<div class='flex flex-wrap items-center  gap-12'>
+    {PROJECTS.map((project) => (
+        <Card {...project} />
+    ) )}
+</div>

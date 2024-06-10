@@ -1,0 +1,58 @@
+---
+import GitHubIcon from "./icons/GitHubIcon.astro";
+import LinkedInIcon from "./icons/LinkedInIcon.astro";
+import MailIcon from "./icons/MailIcon.astro";
+
+
+const year = new Date().getFullYear()
+---
+
+
+
+<footer class="w-full bg-gray-800/50 backdrop-blur-lg shadow">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between text-sm md:text-base">
+      <span class="opacity-50 sm:text-center dark:text-gray-400">© {year} <a href="https://adriancenturion.vercel.app/" class="hover:underline">Adrián Centurion</a>
+    </span>
+    <div>
+
+        <ul class="flex flex-wrap items-center mt-3 opacity-50 sm:mt-0 gap-x-2 md:gap-x-10  text-sm md:text-base">
+            <li>
+                <a href="#top" class="hover:underline me-4 md:me-6">Inicio</a>
+            </li>
+            <li>
+                <a href="#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
+            </li>
+            <li>
+                <a href="#experiencia" class="hover:underline me-4 md:me-6">Experiencia</a>
+            </li>
+            <li>
+                <a href="#proyectos" class="hover:underline me-4 md:me-6">Proyectos</a>
+            </li>
+            <li>
+                <a href="#contacto" download target={'_blank'} rel="noopener noreferrer" class="hover:underline">Contacto</a>
+            </li>
+        </ul>
+        <ul class="flex flex-row flex-wrap gap-2 justify-between mt-2 border-t-2 py-2  border-white opacity-50 text-white">
+            <li class="text-sm md:text-base">
+                <a class="text-sm md:text-base  flex flew-row gap-1 items-center justify-center" href="https://www.linkedin.com/in/adrian-centurion">
+                    <LinkedInIcon class="size-4 md:size-5 fill-white " />
+                    LinkedIn
+                </a>
+            </li>
+            <li class="text-sm md:text-base">
+                <a class="text-sm md:text-base  flex flew-row gap-1 items-center justify-center" href="https://www.github.com/adrianmcenturion">
+                    <GitHubIcon class="size-4 md:size-5 fill-white" />
+                    GitHub
+                </a>
+            </li>
+            <li class="text-sm md:text-base ">
+                <a class="text-sm md:text-base  flex flew-row gap-1 items-center justify-center" href="mailto:adrianmcenturion@gmail.com">
+                    <MailIcon class="size-5 md:size-6 " />
+                    adrianmcenturion@gmail.com
+                </a>
+
+            </li>
+        </ul>
+    </div>
+    </div>
+</footer>

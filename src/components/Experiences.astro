@@ -1,0 +1,26 @@
+---
+import Card from "./Card.astro"
+
+const EXP = [ {
+    img: '/transp.avif',
+    title: 'Transporte de Pianos Marcelo',
+    subtitle: 'Freelance',
+    description: 'Trabajo freelance para una empresa de transporte de pianos. Se logró mejorar la posición de la empresa en la web, mejorando las consultas sobre los servicios prestados así como también la contratación de los mismos.',
+    deploy: 'https://transportesmarcelo.com/',
+    // code: 'https://github.com/flowbite/'
+},
+{
+    img: '/controlp.avif',
+    title: 'App control de pagos',
+    subtitle: 'Freelance',
+    description: 'Trabajo freelance para un estudio jurídico. Es una app que mediante una base de datos de Google Sheets muesstra de una manera más práctica y en forma de calendario los pagos que se deben realizar, se puede filtrar por rango de fechas, y por socios. Se mejoró la productivdad, ya que se automatizaron muchos procesos repetitivos.',
+    // deploy: 'https://flowbite.com/docs/',
+    code: 'https://github.com/adrianmcenturion/payments-app'
+},]
+---
+
+<div class='flex flex-wrap gap-12'>
+    {EXP.map((xp) => (
+        <Card {...xp} />
+    ) )}
+</div>

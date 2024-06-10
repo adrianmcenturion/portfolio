@@ -1,51 +1,102 @@
 ---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import '@fontsource-variable/onest'
+
 interface Props {
 	title: string;
+	description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class=" -z-10 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] bg-fixed bg-no-repeat">
+		<!-- <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] bg-fixed bg-no-repeat"></div> -->
+		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		color-scheme: ligh dark;
+		
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+		font-family: 'Onest Variable', sans-serif;
+		scroll-behavior: smooth;
+		
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+	
+	body {
+		/* background: #050505; */
+		
+		display: flex;
+		flex-direction: column;
+		min-height: 100svh;
+
+		@media (prefers-reduced-motion: reduce) {
+			html {
+				scroll-behavior: auto;
+			}
+		}
 	}
+
 </style>
+<script>
+    import { Collapse } from 'flowbite'
+import type { CollapseOptions, CollapseInterface } from 'flowbite';
+import type { InstanceOptions } from 'flowbite';
+
+// set the target element that will be collapsed or expanded (eg. navbar menu)
+const $targetEl: HTMLElement = document.getElementById('targetEl');
+
+// optionally set a trigger element (eg. a button, hamburger icon)
+const $triggerEl: HTMLElement = document.getElementById('triggerEl');
+
+// optional options with default values and callback functions
+const options: CollapseOptions = {
+    onCollapse: () => {
+        console.log('element has been collapsed');
+    },
+    onExpand: () => {
+        console.log('element has been expanded');
+    },
+    onToggle: () => {
+        console.log('element has been toggled');
+    },
+};
+
+// instance options object
+const instanceOptions: InstanceOptions = {
+  id: 'targetEl',
+  override: true
+};
+
+/*
+ * $targetEl: required
+ * $triggerEl: optional
+ * options: optional
+ * instanceOptions: optional
+ */
+const collapse: CollapseInterface = new Collapse(
+    $targetEl,
+    $triggerEl,
+    options,
+    instanceOptions
+);
+
+// show the target element
+collapse.expand();
+  </script>
